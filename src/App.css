@@ -1,0 +1,122 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 25vw;
+  margin: 3rem;
+  position: relative;
+
+  .dropdown-button {
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    span[title] {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      display: inline-block;
+    }
+
+    span {
+      flex-basis: 80%;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+      font-weight: 700;
+      flex-basis: 20%;
+    }
+  }
+
+  ul {
+    &.hide {
+      display: none;
+    }
+    list-style: none;
+    background-color: #efefef;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 15vw;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0.5rem;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      padding-left: 1rem;
+      white-space: nowrap;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: #E3FEF7;
+      }
+      .item-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: auto;
+      }
+
+      .actions {
+        margin-left: auto;
+
+        span {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown {
+    min-width: 70vw;
+  }
+}
+
+.timeline{
+  display: flex;
+  gap:2rem;
+  align-items: flex-start;
+
+  .group{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+  }
+  .custom-header{
+    display: flex;
+  }
+  .react-datepicker__input-container,.group{
+    input,select{
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: #efefef;
+    }
+  }
+}
+
+
